@@ -1,25 +1,33 @@
-import React from "react";
+import React , { useState, useEffect , memo}from "react";
 
-const Table = ({ labels, rows }) => (
+const Table = (props) => {
+  const data = props.data
+
+  return (
+    <>
+  <h4>1. Table</h4>
   <div className="row">
     <div className="col s12">
       <table>
         <thead>
-          <tr>{labels && labels.map(h => <th>{h}</th>)}</tr>
+          <tr>
+          <th>Regions</th>
+          {data && data.labels.map(h => <th>{h}</th>)}</tr>
         </thead>
-        <tbody>
-          {rows &&
-            rows.map(cols => (
+     {data &&
+            Object.keys(data.regions).map(key => (
               <tr>
-                {cols.map(col => (
+                <th>{key}</th>
+                {data.regions[key].map(col => (
                   <td>{col}</td>
                 ))}
               </tr>
-            ))}
-        </tbody>
+              ))}
       </table>
+
     </div>
   </div>
-);
+  </>)
+};
 
-export default Table;
+export default memo(Table);

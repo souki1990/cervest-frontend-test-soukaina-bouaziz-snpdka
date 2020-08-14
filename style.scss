@@ -3,3 +3,37 @@
 h1, p {
   font-family: $default-font-family;
 }
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,30%);
+  column-gap: 5%;
+  row-gap: 10px;
+  grid-auto-flow: column;
+}
+
+ .badge {
+border:solid 1px $color-gray; 
+padding-left:5px;
+background-color: $color-gray 
+}
+
+.success {
+  background-color:$color-green;
+}
+
+.danger {
+    background-color:$color-red;
+}
+
+.warning {
+    background-color:$color-yellow;
+}
+
+.round {
+  border-radius :$default-border-radius;
+}
+
+$color-gray: #eeeeee;
+$default-border-radius: 5px;

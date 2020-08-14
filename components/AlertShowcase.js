@@ -3,41 +3,18 @@ import React from "react";
 const AlertShowcase = () => (
   <div>
     <div className="row">
-      <div className="col s12 m4">
-        <div className="">success</div>
-      </div>
-      <div className="col s12 m4">
-        <div className="">danger</div>
-      </div>
-      <div className="col s12 m4">
-        <div className="">warning</div>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col s12 m4">
-        <div className="">success round</div>
-      </div>
-      <div className="col s12 m4">
-        <div className="">danger round</div>
-      </div>
-      <div className="col s12 m4">
-        <div className="">warning round</div>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col s12 m4">
-        <div className="">success shadow</div>
-      </div>
-      <div className="col s12 m4">
-        <div className="">round shadow</div>
-      </div>
-      <div className="col s12 m4">
-        <div className="">alert</div>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col s12">
-        <strong>Legend</strong>
+        <div className="badge success">success</div>
+        <div className="badge success round">success round</div>
+        <div className="badge success shadow">success shadow</div>
+        <div className="badge danger">danger</div>
+        <div className="badge danger round">danger round</div>
+        <div className="badge round shadow">round shadow</div>
+        <div className="badge warning">warning</div>
+        <div className="badge warning round">warning round</div>
+        <div className="badge alert">alert shadow</div>
+        </div>
+       <div className="col s12">
+        Legend
       </div>
       <div className="col s12">success: green background</div>
       <div className="col s12">warning: yellow background</div>
@@ -45,7 +22,6 @@ const AlertShowcase = () => (
       <div className="col s12">shadow: shadow</div>
       <div className="col s12">round: round corners</div>
     </div>
-  </div>
 );
 
 export default AlertShowcase;
